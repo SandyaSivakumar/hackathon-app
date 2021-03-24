@@ -1,0 +1,13 @@
+{
+	"id": 1,
+	"name": "Abhishek Prasad",
+	"email": "abhishpr@cisco.com",
+	"phone": "+91 9631077891",
+	"city": "Bangalore",
+	"state": "Karnataka",
+	"country": "India",
+	"organization": "Digital Enterprise Solution",
+	"jobProfile": "Software Developer",
+	"manager": "Karthik Sankaramani",
+	"project": "CDETS"
+}
