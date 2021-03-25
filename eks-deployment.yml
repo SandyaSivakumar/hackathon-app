@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hackathon-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hackathon-app
+  template:
+    metadata:
+      labels:
+        app: hackathon-app
+    spec:
+      containers:
+        - name: hackathon-app
+          image: CONTAINER_IMAGE
+          securityContext:
+            privileged: false
+            allowPrivilegeEscalation: false
