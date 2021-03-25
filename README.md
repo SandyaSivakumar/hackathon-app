@@ -1,1 +1,3 @@
-Simple Reactjs APP for CoDE hackathon
+# Simple Reactjs APP for CoDE hackathon
+
+Employee registry sample app created
