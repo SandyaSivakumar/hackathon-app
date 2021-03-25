@@ -18,3 +18,15 @@ spec:
           securityContext:
             privileged: false
             allowPrivilegeEscalation: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hackathon-app
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 3000
+  selector:
+    app: hackathon-app
