@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hackathon-app
+  name: codeHerThing
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hackathon-app
+      app: codeHerThing
   template:
     metadata:
       labels:
-        app: hackathon-app
+        app: codeHerThing
     spec:
       containers:
-        - name: hackathon-app
+        - name: codeHerThing
           image: CONTAINER_IMAGE
           securityContext:
             privileged: false
@@ -22,11 +22,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hackathon-app
+  name: codeHerThing
 spec:
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 3000
   selector:
-    app: hackathon-app
+    app: codeHerThing
