@@ -31,6 +31,7 @@ phases:
       - export AWS_SESSION_TOKEN="$(echo ${CREDENTIALS} | jq -r '.Credentials.SessionToken')"
       - export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
       - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --role $EKS_KUBECTL_ROLE_ARN
+      - kubectl config set-cluster $EKS_CLUSTER_NAME
       - kubectl apply -f eks-deployment.yaml
       - printf '[{"name":"eks-deployment","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
 artifacts:
