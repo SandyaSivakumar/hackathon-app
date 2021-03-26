@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: codeHerThing
+  name: code-her-thing
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: codeHerThing
+      app: code-her-thing
   template:
     metadata:
       labels:
-        app: codeHerThing
+        app: code-her-thing
     spec:
       containers:
-        - name: codeHerThing
+        - name: code-her-thing
           image: CONTAINER_IMAGE
           securityContext:
             privileged: false
@@ -22,11 +22,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: codeHerThing
+  name: code-her-thing
 spec:
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 3000
   selector:
-    app: codeHerThing
+    app: code-her-thing
