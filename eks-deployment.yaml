@@ -6,7 +6,7 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80
-      targetPort: 80
+      targetPort: 3000
   selector:
     app: code-her-thing
 ---
@@ -37,4 +37,4 @@ spec:
             readOnlyRootFilesystem: true
             allowPrivilegeEscalation: false
           ports:
-            - containerPort: 80
+            - containerPort: 3000
