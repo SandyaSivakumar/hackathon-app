@@ -16,11 +16,6 @@ metadata:
   name: code-her-thing
 spec:
   replicas: 1
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 1
-      maxSurge: 1
   selector:
     matchLabels:
       app: code-her-thing
@@ -34,7 +29,6 @@ spec:
           image: CONTAINER_IMAGE
           securityContext:
             privileged: false
-            readOnlyRootFilesystem: true
             allowPrivilegeEscalation: false
           ports:
             - containerPort: 80
