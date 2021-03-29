@@ -48,7 +48,7 @@ export default class CustomerDetails extends Component {
           <p>Country : {this.state.customerDetails.data.country}</p>
           <p>Organization : {this.state.customerDetails.data.organization}</p>
           <p>Job Profile : {this.state.customerDetails.data.jobProfile}</p>
-          <p>Manager Name : {this.state.customerDetails.data.manager}</p>
+          <p>Manager : {this.state.customerDetails.data.manager}</p>
           <p>Current Project : {this.state.customerDetails.data.project}</p>
         </Panel.Body>
       </Panel>
